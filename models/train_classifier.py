@@ -4,15 +4,15 @@ from sqlalchemy import create_engine
 import joblib
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, make_scorer, recall_score
 from sklearn.model_selection import GridSearchCV
-from nltk.corpus import stopwords
 
 
 def load_data(database_filepath):
@@ -35,8 +35,8 @@ def tokenize(text):
 
 
 def build_model():
-    model = RandomForestClassifier(random_state=42)
-    multi_output_model = MultiOutputClassifier(model, n_jobs=36)
+    model = RandomForestClassifier(class_weight='balanced', random_state=42)
+    multi_output_model = MultiOutputClassifier(model, n_jobs=-1)
 
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
@@ -45,17 +45,23 @@ def build_model():
     ])
 
     parameters = {
-        'tfidf__smooth_tfidf': [True, False],
-        'clf__n_estimators' : [25, 100, 300],
-        'clf__max_depth' : [5, 10, 25],
-        'clf__min_samples_leaf' : [1, 2]
+       # 'tfidf__smooth_idf': [False] #,
+    'clf__estimator__n_estimators': [25, 100, 300],
+    'clf__estimator__max_depth': [5, 10, 25]
+       # 'clf__min_samples_leaf' : [1, 2]
     }
 
-    return pipeline
+    scorer = make_scorer(recall_score, average='macro')
+
+    cv = GridSearchCV(pipeline, param_grid=parameters, scoring=scorer, cv=3)
+
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
     Y_pred = model.predict(X_test)
+
+    print("Best Parameters:", model.best_params_)
 
     for i, col in enumerate(category_names):
         print(f'Classification Results for column: {col}')

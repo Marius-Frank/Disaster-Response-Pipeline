@@ -3,26 +3,27 @@ Loading data...
 Building model...
 Training model...
 Evaluating model...
+Best Parameters: {'clf__estimator__max_depth': 5, 'clf__estimator__n_estimators': 300}
 Classification Results for column: related
               precision    recall  f1-score   support
 
-           0       0.72      0.32      0.44      1274
-           1       0.81      0.96      0.88      3932
+           0       0.47      0.78      0.59      1239
+           1       0.91      0.72      0.81      3967
 
-    accuracy                           0.80      5206
-   macro avg       0.76      0.64      0.66      5206
-weighted avg       0.79      0.80      0.77      5206
+    accuracy                           0.74      5206
+   macro avg       0.69      0.75      0.70      5206
+weighted avg       0.81      0.74      0.75      5206
 
 --------------------------------------------------
 Classification Results for column: request
               precision    recall  f1-score   support
 
-           0       0.90      0.98      0.94      4310
-           1       0.87      0.49      0.62       896
+           0       0.94      0.86      0.90      4290
+           1       0.53      0.75      0.62       916
 
-    accuracy                           0.90      5206
-   macro avg       0.88      0.74      0.78      5206
-weighted avg       0.90      0.90      0.89      5206
+    accuracy                           0.84      5206
+   macro avg       0.74      0.80      0.76      5206
+weighted avg       0.87      0.84      0.85      5206
 
 --------------------------------------------------
 Classification Results for column: offer
@@ -31,75 +32,75 @@ Classification Results for column: offer
            0       1.00      1.00      1.00      5183
            1       0.00      0.00      0.00        23
 
-    accuracy                           1.00      5206
+    accuracy                           0.99      5206
    macro avg       0.50      0.50      0.50      5206
-weighted avg       0.99      1.00      0.99      5206
+weighted avg       0.99      0.99      0.99      5206
 
 --------------------------------------------------
 Classification Results for column: aid_related
               precision    recall  f1-score   support
 
-           0       0.78      0.84      0.81      3027
-           1       0.76      0.68      0.72      2179
+           0       0.77      0.82      0.79      3056
+           1       0.71      0.65      0.68      2150
 
-    accuracy                           0.77      5206
-   macro avg       0.77      0.76      0.76      5206
-weighted avg       0.77      0.77      0.77      5206
+    accuracy                           0.75      5206
+   macro avg       0.74      0.73      0.73      5206
+weighted avg       0.74      0.75      0.74      5206
 
 --------------------------------------------------
 Classification Results for column: medical_help
               precision    recall  f1-score   support
 
-           0       0.92      1.00      0.96      4793
-           1       0.62      0.06      0.11       413
+           0       0.96      0.91      0.93      4803
+           1       0.33      0.51      0.40       403
 
-    accuracy                           0.92      5206
-   macro avg       0.77      0.53      0.53      5206
-weighted avg       0.90      0.92      0.89      5206
+    accuracy                           0.88      5206
+   macro avg       0.64      0.71      0.67      5206
+weighted avg       0.91      0.88      0.89      5206
 
 --------------------------------------------------
 Classification Results for column: medical_products
               precision    recall  f1-score   support
 
-           0       0.96      1.00      0.98      4956
-           1       0.74      0.09      0.16       250
+           0       0.98      0.93      0.95      4973
+           1       0.27      0.55      0.36       233
 
-    accuracy                           0.95      5206
-   macro avg       0.85      0.55      0.57      5206
-weighted avg       0.95      0.95      0.94      5206
+    accuracy                           0.91      5206
+   macro avg       0.62      0.74      0.66      5206
+weighted avg       0.95      0.91      0.93      5206
 
 --------------------------------------------------
 Classification Results for column: search_and_rescue
               precision    recall  f1-score   support
 
-           0       0.97      1.00      0.99      5070
-           1       0.62      0.04      0.07       136
+           0       0.98      0.95      0.96      5055
+           1       0.14      0.27      0.18       151
 
-    accuracy                           0.97      5206
-   macro avg       0.80      0.52      0.53      5206
-weighted avg       0.97      0.97      0.96      5206
+    accuracy                           0.93      5206
+   macro avg       0.56      0.61      0.57      5206
+weighted avg       0.95      0.93      0.94      5206
 
 --------------------------------------------------
 Classification Results for column: security
               precision    recall  f1-score   support
 
-           0       0.98      1.00      0.99      5112
-           1       0.00      0.00      0.00        94
+           0       0.99      0.97      0.98      5112
+           1       0.11      0.20      0.14        94
 
-    accuracy                           0.98      5206
-   macro avg       0.49      0.50      0.50      5206
-weighted avg       0.96      0.98      0.97      5206
+    accuracy                           0.95      5206
+   macro avg       0.55      0.59      0.56      5206
+weighted avg       0.97      0.95      0.96      5206
 
 --------------------------------------------------
 Classification Results for column: military
               precision    recall  f1-score   support
 
-           0       0.97      1.00      0.98      5034
-           1       0.69      0.05      0.10       172
+           0       0.99      0.94      0.96      5044
+           1       0.27      0.69      0.39       162
 
-    accuracy                           0.97      5206
-   macro avg       0.83      0.53      0.54      5206
-weighted avg       0.96      0.97      0.95      5206
+    accuracy                           0.93      5206
+   macro avg       0.63      0.82      0.68      5206
+weighted avg       0.97      0.93      0.95      5206
 
 --------------------------------------------------
 Classification Results for column: child_alone
@@ -115,166 +116,166 @@ weighted avg       1.00      1.00      1.00      5206
 Classification Results for column: water
               precision    recall  f1-score   support
 
-           0       0.96      1.00      0.98      4872
-           1       0.89      0.35      0.51       334
+           0       0.98      0.95      0.96      4897
+           1       0.46      0.72      0.56       309
 
-    accuracy                           0.96      5206
-   macro avg       0.92      0.68      0.74      5206
-weighted avg       0.95      0.96      0.95      5206
+    accuracy                           0.93      5206
+   macro avg       0.72      0.83      0.76      5206
+weighted avg       0.95      0.93      0.94      5206
 
 --------------------------------------------------
 Classification Results for column: food
               precision    recall  f1-score   support
 
-           0       0.96      0.99      0.97      4637
-           1       0.86      0.63      0.73       569
+           0       0.97      0.93      0.95      4643
+           1       0.56      0.76      0.64       563
 
-    accuracy                           0.95      5206
-   macro avg       0.91      0.81      0.85      5206
-weighted avg       0.95      0.95      0.95      5206
+    accuracy                           0.91      5206
+   macro avg       0.76      0.84      0.80      5206
+weighted avg       0.92      0.91      0.92      5206
 
 --------------------------------------------------
 Classification Results for column: shelter
               precision    recall  f1-score   support
 
-           0       0.94      0.99      0.97      4752
-           1       0.85      0.32      0.47       454
+           0       0.97      0.93      0.95      4744
+           1       0.50      0.69      0.58       462
 
-    accuracy                           0.94      5206
-   macro avg       0.89      0.66      0.72      5206
-weighted avg       0.93      0.94      0.92      5206
+    accuracy                           0.91      5206
+   macro avg       0.73      0.81      0.77      5206
+weighted avg       0.93      0.91      0.92      5206
 
 --------------------------------------------------
 Classification Results for column: clothing
               precision    recall  f1-score   support
 
-           0       0.98      1.00      0.99      5120
-           1       0.83      0.06      0.11        86
+           0       0.99      0.98      0.99      5123
+           1       0.31      0.60      0.41        83
 
-    accuracy                           0.98      5206
-   macro avg       0.91      0.53      0.55      5206
-weighted avg       0.98      0.98      0.98      5206
+    accuracy                           0.97      5206
+   macro avg       0.65      0.79      0.70      5206
+weighted avg       0.98      0.97      0.98      5206
 
 --------------------------------------------------
 Classification Results for column: money
               precision    recall  f1-score   support
 
-           0       0.97      1.00      0.99      5070
-           1       1.00      0.01      0.03       136
+           0       0.99      0.97      0.98      5077
+           1       0.33      0.54      0.41       129
 
-    accuracy                           0.97      5206
-   macro avg       0.99      0.51      0.51      5206
-weighted avg       0.97      0.97      0.96      5206
+    accuracy                           0.96      5206
+   macro avg       0.66      0.76      0.70      5206
+weighted avg       0.97      0.96      0.97      5206
 
 --------------------------------------------------
 Classification Results for column: missing_people
               precision    recall  f1-score   support
 
-           0       0.99      1.00      0.99      5153
-           1       1.00      0.02      0.04        53
+           0       0.99      0.99      0.99      5140
+           1       0.17      0.18      0.18        66
 
-    accuracy                           0.99      5206
-   macro avg       1.00      0.51      0.52      5206
-weighted avg       0.99      0.99      0.99      5206
+    accuracy                           0.98      5206
+   macro avg       0.58      0.59      0.58      5206
+weighted avg       0.98      0.98      0.98      5206
 
 --------------------------------------------------
 Classification Results for column: refugees
               precision    recall  f1-score   support
 
-           0       0.97      1.00      0.98      5022
-           1       0.64      0.04      0.07       184
+           0       0.98      0.94      0.96      5030
+           1       0.21      0.49      0.30       176
 
-    accuracy                           0.97      5206
-   macro avg       0.80      0.52      0.53      5206
-weighted avg       0.95      0.97      0.95      5206
+    accuracy                           0.92      5206
+   macro avg       0.60      0.71      0.63      5206
+weighted avg       0.96      0.92      0.94      5206
 
 --------------------------------------------------
 Classification Results for column: death
               precision    recall  f1-score   support
 
-           0       0.96      1.00      0.98      4946
-           1       0.88      0.11      0.19       260
+           0       0.98      0.94      0.96      4966
+           1       0.30      0.53      0.38       240
 
-    accuracy                           0.95      5206
-   macro avg       0.92      0.55      0.58      5206
-weighted avg       0.95      0.95      0.94      5206
+    accuracy                           0.92      5206
+   macro avg       0.64      0.74      0.67      5206
+weighted avg       0.95      0.92      0.93      5206
 
 --------------------------------------------------
 Classification Results for column: other_aid
               precision    recall  f1-score   support
 
-           0       0.87      1.00      0.93      4496
-           1       0.70      0.03      0.06       710
+           0       0.92      0.83      0.88      4522
+           1       0.33      0.54      0.41       684
 
-    accuracy                           0.87      5206
-   macro avg       0.78      0.51      0.49      5206
-weighted avg       0.84      0.87      0.81      5206
+    accuracy                           0.79      5206
+   macro avg       0.63      0.69      0.64      5206
+weighted avg       0.85      0.79      0.81      5206
 
 --------------------------------------------------
 Classification Results for column: infrastructure_related
               precision    recall  f1-score   support
 
-           0       0.94      1.00      0.97      4881
-           1       0.00      0.00      0.00       325
+           0       0.96      0.84      0.90      4856
+           1       0.20      0.56      0.29       350
 
-    accuracy                           0.94      5206
-   macro avg       0.47      0.50      0.48      5206
-weighted avg       0.88      0.94      0.91      5206
+    accuracy                           0.82      5206
+   macro avg       0.58      0.70      0.60      5206
+weighted avg       0.91      0.82      0.86      5206
 
 --------------------------------------------------
 Classification Results for column: transport
               precision    recall  f1-score   support
 
-           0       0.96      1.00      0.98      4953
-           1       0.89      0.12      0.22       253
+           0       0.97      0.91      0.94      4963
+           1       0.21      0.46      0.29       243
 
-    accuracy                           0.96      5206
-   macro avg       0.92      0.56      0.60      5206
-weighted avg       0.95      0.96      0.94      5206
+    accuracy                           0.89      5206
+   macro avg       0.59      0.69      0.61      5206
+weighted avg       0.94      0.89      0.91      5206
 
 --------------------------------------------------
 Classification Results for column: buildings
               precision    recall  f1-score   support
 
-           0       0.96      1.00      0.98      4954
-           1       0.74      0.09      0.16       252
+           0       0.98      0.93      0.95      4934
+           1       0.32      0.61      0.42       272
 
-    accuracy                           0.95      5206
-   macro avg       0.85      0.54      0.57      5206
-weighted avg       0.95      0.95      0.94      5206
+    accuracy                           0.91      5206
+   macro avg       0.65      0.77      0.69      5206
+weighted avg       0.94      0.91      0.93      5206
 
 --------------------------------------------------
 Classification Results for column: electricity
               precision    recall  f1-score   support
 
-           0       0.98      1.00      0.99      5105
-           1       1.00      0.04      0.08       101
+           0       0.99      0.97      0.98      5113
+           1       0.23      0.43      0.30        93
 
-    accuracy                           0.98      5206
-   macro avg       0.99      0.52      0.53      5206
-weighted avg       0.98      0.98      0.97      5206
+    accuracy                           0.96      5206
+   macro avg       0.61      0.70      0.64      5206
+weighted avg       0.98      0.96      0.97      5206
 
 --------------------------------------------------
 Classification Results for column: tools
               precision    recall  f1-score   support
 
-           0       0.99      1.00      1.00      5178
-           1       0.00      0.00      0.00        28
+           0       0.99      1.00      1.00      5169
+           1       0.20      0.03      0.05        37
 
     accuracy                           0.99      5206
-   macro avg       0.50      0.50      0.50      5206
+   macro avg       0.60      0.51      0.52      5206
 weighted avg       0.99      0.99      0.99      5206
 
 --------------------------------------------------
 Classification Results for column: hospitals
               precision    recall  f1-score   support
 
-           0       0.99      1.00      1.00      5156
-           1       0.00      0.00      0.00        50
+           0       0.99      0.99      0.99      5155
+           1       0.12      0.18      0.14        51
 
-    accuracy                           0.99      5206
-   macro avg       0.50      0.50      0.50      5206
-weighted avg       0.98      0.99      0.99      5206
+    accuracy                           0.98      5206
+   macro avg       0.56      0.58      0.57      5206
+weighted avg       0.98      0.98      0.98      5206
 
 --------------------------------------------------
 Classification Results for column: shops
@@ -291,111 +292,111 @@ weighted avg       0.99      0.99      0.99      5206
 Classification Results for column: aid_centers
               precision    recall  f1-score   support
 
-           0       0.99      1.00      0.99      5141
-           1       0.00      0.00      0.00        65
+           0       0.99      0.99      0.99      5144
+           1       0.19      0.23      0.21        62
 
-    accuracy                           0.99      5206
-   macro avg       0.49      0.50      0.50      5206
-weighted avg       0.98      0.99      0.98      5206
+    accuracy                           0.98      5206
+   macro avg       0.59      0.61      0.60      5206
+weighted avg       0.98      0.98      0.98      5206
 
 --------------------------------------------------
 Classification Results for column: other_infrastructure
               precision    recall  f1-score   support
 
-           0       0.96      1.00      0.98      4989
-           1       0.00      0.00      0.00       217
+           0       0.98      0.86      0.91      4970
+           1       0.16      0.58      0.26       236
 
-    accuracy                           0.96      5206
-   macro avg       0.48      0.50      0.49      5206
-weighted avg       0.92      0.96      0.94      5206
+    accuracy                           0.85      5206
+   macro avg       0.57      0.72      0.59      5206
+weighted avg       0.94      0.85      0.88      5206
 
 --------------------------------------------------
 Classification Results for column: weather_related
               precision    recall  f1-score   support
 
-           0       0.89      0.95      0.92      3770
-           1       0.84      0.69      0.76      1436
+           0       0.88      0.91      0.89      3732
+           1       0.74      0.68      0.71      1474
 
-    accuracy                           0.88      5206
-   macro avg       0.87      0.82      0.84      5206
-weighted avg       0.88      0.88      0.87      5206
+    accuracy                           0.84      5206
+   macro avg       0.81      0.79      0.80      5206
+weighted avg       0.84      0.84      0.84      5206
 
 --------------------------------------------------
 Classification Results for column: floods
               precision    recall  f1-score   support
 
-           0       0.95      1.00      0.97      4770
-           1       0.92      0.40      0.56       436
+           0       0.97      0.89      0.93      4765
+           1       0.37      0.69      0.48       441
 
-    accuracy                           0.95      5206
-   macro avg       0.93      0.70      0.76      5206
-weighted avg       0.95      0.95      0.94      5206
+    accuracy                           0.88      5206
+   macro avg       0.67      0.79      0.71      5206
+weighted avg       0.92      0.88      0.89      5206
 
 --------------------------------------------------
 Classification Results for column: storm
               precision    recall  f1-score   support
 
-           0       0.95      0.99      0.97      4737
-           1       0.81      0.51      0.63       469
+           0       0.97      0.93      0.95      4751
+           1       0.48      0.65      0.55       455
 
-    accuracy                           0.95      5206
-   macro avg       0.88      0.75      0.80      5206
-weighted avg       0.94      0.95      0.94      5206
+    accuracy                           0.91      5206
+   macro avg       0.72      0.79      0.75      5206
+weighted avg       0.92      0.91      0.91      5206
 
 --------------------------------------------------
 Classification Results for column: fire
               precision    recall  f1-score   support
 
-           0       0.99      1.00      0.99      5151
-           1       1.00      0.02      0.04        55
+           0       0.99      0.99      0.99      5149
+           1       0.30      0.21      0.25        57
 
     accuracy                           0.99      5206
-   macro avg       0.99      0.51      0.52      5206
-weighted avg       0.99      0.99      0.98      5206
+   macro avg       0.65      0.60      0.62      5206
+weighted avg       0.98      0.99      0.98      5206
 
 --------------------------------------------------
 Classification Results for column: earthquake
               precision    recall  f1-score   support
 
-           0       0.98      0.99      0.98      4728
-           1       0.89      0.76      0.82       478
+           0       0.97      0.97      0.97      4680
+           1       0.76      0.72      0.74       526
 
-    accuracy                           0.97      5206
-   macro avg       0.93      0.87      0.90      5206
-weighted avg       0.97      0.97      0.97      5206
+    accuracy                           0.95      5206
+   macro avg       0.86      0.85      0.86      5206
+weighted avg       0.95      0.95      0.95      5206
 
 --------------------------------------------------
 Classification Results for column: cold
               precision    recall  f1-score   support
 
-           0       0.98      1.00      0.99      5104
-           1       0.77      0.10      0.17       102
+           0       0.99      0.97      0.98      5096
+           1       0.26      0.42      0.32       110
 
-    accuracy                           0.98      5206
-   macro avg       0.88      0.55      0.58      5206
-weighted avg       0.98      0.98      0.97      5206
+    accuracy                           0.96      5206
+   macro avg       0.63      0.70      0.65      5206
+weighted avg       0.97      0.96      0.97      5206
 
 --------------------------------------------------
 Classification Results for column: other_weather
               precision    recall  f1-score   support
 
-           0       0.95      1.00      0.97      4945
-           1       0.50      0.03      0.05       261
+           0       0.98      0.85      0.91      4944
+           1       0.18      0.61      0.28       262
 
-    accuracy                           0.95      5206
-   macro avg       0.73      0.51      0.51      5206
-weighted avg       0.93      0.95      0.93      5206
+    accuracy                           0.84      5206
+   macro avg       0.58      0.73      0.59      5206
+weighted avg       0.94      0.84      0.88      5206
 
 --------------------------------------------------
 Classification Results for column: direct_report
               precision    recall  f1-score   support
 
-           0       0.87      0.98      0.92      4226
-           1       0.83      0.38      0.52       980
+           0       0.92      0.83      0.87      4160
+           1       0.51      0.70      0.59      1046
 
-    accuracy                           0.87      5206
-   macro avg       0.85      0.68      0.72      5206
-weighted avg       0.87      0.87      0.85      5206
+    accuracy                           0.80      5206
+   macro avg       0.71      0.76      0.73      5206
+weighted avg       0.83      0.80      0.81      5206
 
 --------------------------------------------------
 Saving model...

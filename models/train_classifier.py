@@ -11,6 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report
+from sklearn.model_selection import GridSearchCV
 from nltk.corpus import stopwords
 
 
@@ -35,13 +36,20 @@ def tokenize(text):
 
 def build_model():
     model = RandomForestClassifier(random_state=42)
-    multi_output_model = MultiOutputClassifier(model)
+    multi_output_model = MultiOutputClassifier(model, n_jobs=36)
 
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()), #,
         ('clf', multi_output_model)
     ])
+
+    parameters = {
+        'tfidf__smooth_tfidf': [True, False],
+        'clf__n_estimators' : [25, 100, 300],
+        'clf__max_depth' : [5, 10, 25],
+        'clf__min_samples_leaf' : [1, 2]
+    }
 
     return pipeline
 

@@ -33,12 +33,16 @@ def clean_data(df):
 
     df = df.drop_duplicates()
 
+    df[category_colnames] = df[category_colnames].astype(int)
+    df = df[(~df[category_colnames].isin((0, 1))).sum(axis=1)==0]
+
+
     return df
 
 
 def save_data(df, database_filename):
     engine = create_engine(f'sqlite:///{database_filename}')
-    df.to_sql('DisasterResponse', engine, index=False)  
+    df.to_sql('DisasterResponse', engine, index=False, if_exists='replace')  
 
 
 def main():

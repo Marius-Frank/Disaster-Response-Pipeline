@@ -46,9 +46,9 @@ def build_model():
 
     parameters = {
        # 'tfidf__smooth_idf': [False] #,
-    'clf__estimator__n_estimators': [500, 750], #[25, 100, 300],
-    'clf__estimator__max_depth': [5], #, 10, 25]
-    'clf__estimator__min_samples_leaf' : [1, 2, 5]
+    'clf__estimator__n_estimators': [100], #500, 750], #[25, 100, 300],
+    'clf__estimator__max_depth': [5, 10], #, 10, 25]
+    'clf__estimator__min_samples_leaf' : [1, 2, 5, 10]
     }
 
     scorer = make_scorer(recall_score, average='macro')

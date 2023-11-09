@@ -31,7 +31,7 @@ engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('DisasterResponse', engine)
 
 # load model
-model = joblib.load("../models/model.joblib") #your_model_name.pkl")
+model = joblib.load("../models/model.joblib")
 
 
 # index webpage displays cool visuals and receives user input text for model
@@ -40,12 +40,14 @@ model = joblib.load("../models/model.joblib") #your_model_name.pkl")
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+
+    occurrence_frac = df.iloc[:,4:].mean().sort_values(ascending=True)
+    category_names  = list(occurrence_frac.index) #df.iloc[:,4:].columns
+    category_names  = [cat.replace('_', ' ') for cat in category_names]
     
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
             'data': [
@@ -64,7 +66,31 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+#mf
+        {
+            'data': [
+                Bar(
+                    y=category_names,
+                    x=occurrence_frac,
+                    orientation='h'
+                )
+            ],
+
+            'layout': {
+                'title': 'Fraction of Messages Categorized as',
+                'height' : 800,
+                'xaxis': {
+                    'title': "Fraction [%]"
+                },
+                'yaxis': {
+                    'title': "Category",
+                    #'title_standoff': 50,  # Adjust this value as needed
+                    'automargin': True
+                }
+            }
         }
+#mf
     ]
     
     # encode plotly graphs in JSON
